@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBIST | Plateforme des cours</title>
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- science gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Saira:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            background-color: #121531e3;                                
+            margin: 0;
+            color: #ffff;
+            /* text-align: center; */
+            font-family: "Poppins", sans-serif;
+            
+        }
+        nav {
+            background-color: #14191de8;
+            margin: 20px 25px;
+            padding-right: 20px;
+            border-radius: 20px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            z-index: 1000; 
+            top: 20px;
+            transition: ease 0.2s;
+            box-shadow: 0px 0px 20px #000000be;
+        }
+        nav:hover {
+            box-shadow: 0px 0px 50px #000000b4;
+
+        }
+        nav a {
+            text-decoration: none;
+            padding: 20px 10px;
+            color: #ffff;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #3490d1;
+        }
+        nav input {
+            width: 38%;
+            height: 40px;
+            padding: 0 16px; /* Espace à gauche et à droite */
+            background: linear-gradient(90deg, #8b3dff3a 20%, #2596ff46 80%);
+            border: 1px solid #5362B5;
+            border-radius: 8px;
+            color: #FFFFFF; /* Texte tapé en blanc pur */
+            font-size: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        nav input::placeholder {
+            color: #c7c5c56b;
+            font-family: "Poppins", sans-serif;
+        }
+        nav input:hover {
+            border: 2px solid #3490d1;
+            width: 38%;
+        }
+
+
+        .btn-webist {
+            /* display: inline-block; */
+            /* padding: 14px 34px; */
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            /* font-size: 16px; */
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px; /* Donne la forme pilule arrondie */
+            position: absolute;
+            left: 8.8%;        /* Aligne le bouton exactement avec le début du texte "Master..." */
+            /* bottom: 31%; */
+            top: 59%;
+            font-size: clamp(11px, 1.2vw, 16px);
+            padding: clamp(8px, 1vw, 14px) clamp(18px, 2.5vw, 34px);
+
+            /* Dégradé violet vers bleu cyan assorti au logo */
+            background: linear-gradient(90deg, #8b3dff 0%, #2596ff 100%);
+            opacity:90%;
+            /* Légère lueur douce */
+            box-shadow: 0 0px 32px rgba(56, 152, 255, 0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-webist:hover {
+            box-shadow: 0 0px 52px rgba(56, 152, 255, 0.55);
+         }
+        .banner-box {
+            position: relative; 
+            margin: 30px 0 60px 0;
+        }
+        .banner img {
+            margin:30px 0 100px 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.336);
+            display: block;
+        }
+
+
+
+        .position2 {
+            display: flex;
+            align-items: center;
+            border-radius: 20px;
+            margin: 0 20px;
+        }
+        .position2 article img{
+            border-radius: 20px;
+            margin: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.363);
+            transition: 0.2s ease;
+        }
+        .position2 div h3{
+            font-weight: 700;
+            font-size: 40px;
+            text-align: left;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .position2 div p{
+            font-weight: 300;
+            font-size: 20px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .position3 {
+            margin: 80px 20px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .position3 h3{
+            font-size: 40px;
+            
+        }
+
+        .course {
+            /* border: 4px solid #3490d1; */
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.363);
+            text-align: left;
+            background-color: #14191d;
+            margin: 5px;
+            padding: 15px;
+            transition: 0.2s ease;
+        }
+        .course:hover {
+            /* border: 4px solid #3490d1da; */
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.363);
+            text-align: left;
+            background-color: #14191d;
+            margin: 5px;
+            padding: 15px;
+            transform: scale(1.05);
+        }
+        .course img {
+            /* margin: 20px 20px 2px 20px; */
+            border-radius: 15px;
+        }
+        .course h4 {
+            font-weight: 700;
+            font-size: 20px;
+            margin: 5px;
+        }
+        .course p {
+            color: #c7c5c5;
+            font-weight: 300;
+            font-size: 12px;
+            margin: 5px;
+        }
+        .course h5{
+            margin: 10px 15px;
+            font-size: 15px;
+        }
+        .sous-p3 {
+            display: flex;
+        }
+
+        .position4 {
+            margin: 80px 0px;
+            /* border: 10px solid #33628b; */
+            padding: 20px 0;
+            background-color: #14191dcc;
+            text-align: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .position4 article {
+            margin: 50px 0px;
+        }
+        .position4 article img{
+            justify-content: space-between;
+            margin: 0 30px;
+        }
+        .position5 {
+            display: flex;
+            margin: 20px;
+            align-items: center;
+            padding: 80px;
+            background: #14191dcc;
+            border-radius: 20px;
+        }
+        .text-cert {
+            text-align: left;
+
+        }
+        .cert {
+            display: flex;
+            text-align: right;
+            position: relative;
+        }
+        .cert div {
+            margin: 10px;
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 15px;
+        }
+        </style>
+</head>
+<body>
+    <nav>
+        <img src="Logo detourer.png" alt="logo" width="15%">
+        <input type="search" placeholder="Type the name of your course here">
+        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+ 
+            <a href="">Home</a>
+            <a href="">Courses</a>
+            <a href="">My lessons</a>
+            <a href="">Profile</a>
+            <a href="">Contact</a>
+    </nav>
+    <article class="banner">
+        <img src="banner.jpg" alt="banner" width="100%"><br>
+        <a href="#courses" class="btn-webist">Explore Courses</a>
+    </article>
+    <section class="position2">
+        <div>
+            <h3>Learn essential skills for your career</h3>
+            <p>Webist helps you quickly develop highly sought-after skills to advance your career in the job market</p>
+        </div>
+        <article>
+            <img src="formes.jpg" alt="image vedette" width="280px">
+        </article>
+        <article>
+            <img src="laptop vedette.jpg" alt="image vedette" width="280px">
+        </article>
+        <article>
+            <img src="vedette trophe.jpg" alt="image vedette" width="280px">
+        </article>
+    </section>
+    <section class="position3">
+        <h3>Top courses</h3>
+        <article class="sous-p3">
+            <div class="course">
+                <img src="img couses/course 1.jpg" alt="course" width="300px">
+                <h4>Learn coding in 1 minute !</h4>
+                <p>Digital innovations</p>
+                <h5>9,99 $US</h5>
+            </div>
+            <div class="course">
+                <img src="img couses/course 2.jpg" alt="course" width="300px">
+                <h4>Ethetical hacker: learn <br>hacking step by step</h4>
+                <p>John programming</p>
+                <h5>9,99 $US</h5>
+            </div>
+            <div class="course">
+                <img src="img couses/course 3.jpg" alt="course" width="300px">
+                <h4>Get the basics of design </h4>
+                <p>Marie benmart | Design skilling</p>
+                <h5>9,99 $US</h5>
+            </div>
+            <div class="course">
+                <img src="img couses/course 4.jpg" alt="course" width="300px">
+                <h4>Learn how to build your own <br>AI Agent </h4>
+                <p>Bill Gate </p>
+                <h5>9,99 $US</h5>
+            </div>
+        </article>
+    </section>
+    <section class="position4">
+        <h4>Over 17,000 companies and millions of participants worldwide trust Webist</h4>
+        <article>
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/3E0eIh3tWHNWADiHNBmW4j/3444d1a4d029f283aa7d10ccf982421e/volkswagen_logo.svg" alt="logo1">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/23XnhdqwGCYUhfgIJzj3PM/77259d1ac2a7d771c4444e032ee40d9e/vimeo_logo_resized-2.svg" alt="logo1">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/2pNyDO0KV1eHXk51HtaAAz/090fac96127d62e784df31e93735f76a/samsung_logo.svg" alt="logo1">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/7guDRVYa2DZD0wD1SyxREP/b704dfe6b0ffb3b26253ec36b4aab505/ericsson_logo.svg" alt="logo1">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/3YzfvEjCAUi3bKHLW2h1h8/ec478fa1ed75f6090a7ecc9a083d80af/cisco_logo.svg" alt="logo1">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/2tQm6aYrWQzlKBQ95W00G/c7aaf002814c2cde71d411926eceaefa/citi_logo.svg" alt="logo1">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/1UUVZtTGuvw23MwEnDPUr3/2683579ac045486a0aff67ce8a5eb240/procter_gamble_logo.svg" alt="logo1">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/1GoAicYDYxxRPGnCpg93gi/a8b6190cc1a24e21d6226200ca488eb8/hewlett_packard_enterprise_logo.svg" alt="logo1">
+        </article>
+    </section>
+    <section class="position5">
+        <article class="text-cert">
+            <h4>Get a certificate and develop your career by yourself</h5>
+            <p>Prepare yourself to take certifications with comprehensive courses, practice exercises and special offers that include exam vouchers.</p>
+        </article>
+        <article class="cert">
+            <div>
+                <img src="img couses/certificate 1.jpg" alt="certificate" width="80%">
+                <h5></h5>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+            <div>
+                <img src="img couses/certifiate 2.jpg" alt="certificate" width="80%">
+                <h5></h5>
+            </div>
+            <div>
+                <img src="img couses/certificate 3.jpg" alt="certificate" width="80%">
+                <h5></h5>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

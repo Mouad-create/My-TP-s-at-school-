@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBIST | Sign up</title>
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- science gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Saira -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Varela Round -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Saira:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            background-color: #121531;
+            color: #ffff;
+            text-align: center;
+            font-weight: 700;
+            font-family: "Poppins", sans-serif;
+        }
+        .cdre {
+            background-color: #121531; 
+            /* background: radial-gradient(45deg, #8A2BE2, #121531, #0f1c25); */
+        }
+        .cdre fieldset {
+            border-radius: 30px;
+        }
+        .cdre article {
+            background-color: #282d68;
+            border-radius: 30px;
+            /* padding: 20px 80px; */
+            margin: 0% 32%;
+            text-align: center;
+        }
+        .cdre img {
+            width: 30%;
+            text-align: center;
+        }
+        .cdre div {
+            text-align: left;
+            padding: 10% auto;
+            margin: 10% 7%;
+            font-weight: 20%;
+        }
+        .cdre button {
+            border-radius: 20px;
+            padding: 10px 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            color: #ffff;
+            border: none;
+            background-color: #3490d1;
+            border: 3px solid #3490d1;
+            transition: 0.2s ease;
+        }
+        .cdre button:hover {
+            border: 3px solid #3490d1;
+            background-color:#eeeded;
+            color: #3490d1;
+            cursor: pointer;
+        }
+        .cdre input {
+            width: 100%;
+            height: 45px;
+            padding: 0 16px; 
+            box-sizing: border-box;
+            background-color: #364182; /* Fond légèrement plus sombre pour faire ressortir le texte */
+            border: 1px solid #5362B5;
+            border-radius: 8px;
+            color: #FFFFFF; /* Texte tapé en blanc pur */
+            font-size: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .cdre input:hover {
+            border: 2px solid #3490d1;
+            width: 50%;
+        }
+        .cdre input::placeholder {
+            color: #c7c5c5;
+            font-family: "Arial", sans-serif;
+        }
+        .input-field:focus {
+            border-color: #38B6FF;
+            box-shadow: 0 0 0 3px rgba(56, 182, 255, 0.25);
+        }
+        .text {
+            margin: 10px 0;
+            padding: 7px 0;
+        }
+        a {
+            color: #3490d1;
+        }
+        div a {
+            float: right;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form class="cdre">
+        <img src="Logo detourer.png" alt="logo">
+    <article>
+        <fieldset>
+            <h1 style="font-size: 40px;">Sign up</h1>
+            <div>
+                <label class="text">Full name:</label><br>
+                <input class="text" type="text" placeholder="Type your Name" style="width: 100%;" required><br>
+                <label class="text">Age:</label><br>
+                <input class="text" type="number" placeholder="Type your Age" style="width: 100%;" required><br>
+                <label class="text">E-mail:</label><br>
+                <input class="text" type="email" placeholder="Type your E-mail" style="width: 100%;" required><br>
+                <label class="text">Password:</label><br>
+                <input class="text" type="password" placeholder="Type your Password" style="width: 100%;" required><br>
+                <button class="text">Continue</button>
+                <a href="page garde.html">Mode visitor</a>
+            </div>
+            <p>You have already an account? <a href="sign in.html">SIGN IN</a></p>
+        </fieldset>
+    </article>
+</body>
+</html>
