@@ -121,6 +121,7 @@
             align-items: center;
             border-radius: 20px;
             margin: 0 20px;
+            justify-content: space-between;
         }
         .position2 article img{
             border-radius: 20px;
@@ -147,7 +148,6 @@
             font-size: 40px;
             
         }
-/* woooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
         .course {
             /* border: 4px solid #3490d1; */
             border-radius: 20px;
@@ -171,6 +171,9 @@
         .course img {
             /* margin: 20px 20px 2px 20px; */
             border-radius: 15px;
+            width: 100%;
+            height: auto;
+            display: block;
         }
         .course h4 {
             font-weight: 700;
@@ -188,7 +191,11 @@
             font-size: 15px;
         }
         .sous-p3 {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales qui tiennent dans l'écran */
+            gap: 20px;                              /* Espace entre les cartes */
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .position4 {
@@ -210,24 +217,43 @@
             display: flex;
             margin: 20px;
             align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
             padding: 80px;
             background: #14191dcc;
             border-radius: 20px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
         .text-cert {
             text-align: left;
-
+            float: left;
+            width: 70%;
+        }
+        .text-cert h4 {
+            font-size: 30px;
+        }
+        .text-cert p {
+            font-size: 15px;
         }
         .cert {
             display: flex;
             text-align: right;
             position: relative;
+            float: right;
+            justify-content: space-between;
+            width: 100%;
         }
         .cert div {
             margin: 10px;
             border: 2px solid white;
             border-radius: 15px;
-            padding: 15px;
+            padding: 10px;
+        }
+        .cert div img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            display: block;
         }
         </style>
 </head>
@@ -276,7 +302,7 @@
             </div>
             <div class="course">
                 <img src="img couses/course 2.jpg" alt="course" width="300px">
-                <h4>Ethetical hacker: learn <br>hacking step by step</h4>
+                <h4>Ethetical hacker: learn hacking step by step</h4>
                 <p>John programming</p>
                 <h5>9,99 $US</h5>
             </div>
@@ -288,7 +314,7 @@
             </div>
             <div class="course">
                 <img src="img couses/course 4.jpg" alt="course" width="300px">
-                <h4>Learn how to build your own <br>AI Agent </h4>
+                <h4>Learn how to build your own AI Agent </h4>
                 <p>Bill Gate </p>
                 <h5>9,99 $US</h5>
             </div>
@@ -315,7 +341,8 @@
         <article class="cert">
             <div>
                 <img src="img couses/certificate 1.jpg" alt="certificate" width="80%">
-                <h5></h5>
+                <h5>CompTIA</h5>
+                <p></p>
                 <br>
                 <br>
                 <br>
@@ -326,11 +353,11 @@
             </div>
             <div>
                 <img src="img couses/certifiate 2.jpg" alt="certificate" width="80%">
-                <h5></h5>
+                <h5>AWS</h5>
             </div>
             <div>
                 <img src="img couses/certificate 3.jpg" alt="certificate" width="80%">
-                <h5></h5>
+                <h5>PMI</h5>
             </div>
         </article>
     </section>
