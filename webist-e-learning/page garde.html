@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" href="icon.png">
     <style>
         body {
-            background-color: #121531e3;                                
+            background: linear-gradient(145deg, #141949 10%, #091429 90%);                                
             margin: 0;
             color: #ffff;
             /* text-align: center; */
@@ -27,7 +27,7 @@
             
         }
         nav {
-            background-color: #14191de8;
+            background-color: #091429ea;
             margin: 20px 25px;
             padding-right: 20px;
             border-radius: 20px;
@@ -110,7 +110,7 @@
         }
         .banner img {
             margin:30px 0 100px 0;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.336);
+            /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.336); */
             display: block;
         }
 
@@ -151,9 +151,9 @@
         .course {
             /* border: 4px solid #3490d1; */
             border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.363);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.644);
             text-align: left;
-            background-color: #14191d;
+            background: linear-gradient(180deg, #010815 0%, #091429 100%);        /* #14191d */
             margin: 5px;
             padding: 15px;
             transition: 0.2s ease;
@@ -200,9 +200,9 @@
 
         .position4 {
             margin: 80px 0px;
-            /* border: 10px solid #33628b; */
             padding: 20px 0;
-            background-color: #14191dcc;
+            /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.363); */
+            background-color: #091429;
             text-align: center;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
@@ -220,7 +220,8 @@
             justify-content: space-between;
             flex-direction: row;
             padding: 80px;
-            background: #14191dcc;
+            background: linear-gradient(0deg, #010815 0%, #091429 100%);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.363);
             border-radius: 20px;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
@@ -245,15 +246,25 @@
         }
         .cert div {
             margin: 10px;
-            border: 2px solid white;
+            /* border: 2px solid white; */
             border-radius: 15px;
+            background: linear-gradient(145deg, #8b3dff3a 20%, #2596ff46 80%);
             padding: 10px;
+            transition: 0.2s ease;
+        }
+        .cert div:hover {
+            background: linear-gradient(145deg, #8b3dff3a 0%, #2596ff46 100%);
         }
         .cert div img {
             border-radius: 10px;
             width: 100%;
             height: auto;
             display: block;
+        }
+        .cert div h5 {
+            text-align: center;
+            font-size: 20px;
+            margin: 7px 0;
         }
         </style>
 </head>
@@ -273,7 +284,7 @@
             <a href="">Contact</a>
     </nav>
     <article class="banner">
-        <img src="banner.jpg" alt="banner" width="100%"><br>
+        <img src="banner 2.jpg" alt="banner" width="100%"><br>
         <a href="#courses" class="btn-webist">Explore Courses</a>
     </article>
     <section class="position2">
